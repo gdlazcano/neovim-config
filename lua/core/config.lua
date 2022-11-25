@@ -1,3 +1,8 @@
+-- disable wrap
+vim.wo.wrap = false
+vim.wo.linebreak = true
+vim.wo.list = true
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -26,9 +31,17 @@ vim.opt.backspace = "indent,eol,start"
 vim.opt.iskeyword:append("-")
 vim.opt.clipboard = "unnamed"
 
+vim.g.copilot_filetypes = {
+	["markdown"] = true,
+}
+
 -- make transparent background
 vim.cmd([[
 augroup transparent_background
   autocmd!
   autocmd ColorScheme * hi Normal ctermbg=none guibg=none
+]])
+
+vim.cmd([[
+  au BufNewFile,BufRead *.ejs set filetype=html
 ]])

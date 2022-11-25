@@ -11,15 +11,6 @@ local ensure_packer = function()
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
--- autocommand that reloads neovim and installs/updates/removes plugins
--- when file is saved
-vim.cmd([[ 
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-  augroup end
-]])
-
 -- import packer safely
 local status, packer = pcall(require, "packer")
 if not status then
@@ -113,6 +104,12 @@ return packer.startup(function(use)
 
 	-- toggleterm
 	use({ "akinsho/toggleterm.nvim" })
+
+	-- smart split
+
+	-- bufferline
+	use({ "akinsho/bufferline.nvim" })
+	use({ "famiu/bufdelete.nvim" })
 
 	if packer_bootstrap then
 		require("packer").sync()
