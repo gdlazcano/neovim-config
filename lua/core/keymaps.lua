@@ -30,10 +30,9 @@ vim.keymap.set("n", "<C-c>", function()
 	require("bufdelete").bufdelete(0, false)
 end)
 
--- gitsigns
-local status, gitsigns = pcall(require, "gitsigns")
-if not status then
-	return
-end
+-- comments
+vim.keymap.set("n", "<leader>/", function()
+	require("Comment.api").toggle.linewise.current()
+end)
 
-vim.keymap.set("n", "<leader>hd", gitsigns.diffthis)
+vim.keymap.set("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>")

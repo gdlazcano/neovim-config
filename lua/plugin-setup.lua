@@ -31,6 +31,7 @@ return packer.startup(function(use)
 
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- file explorer
 	use("nvim-neo-tree/neo-tree.nvim")
