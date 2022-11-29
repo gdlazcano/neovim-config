@@ -76,11 +76,13 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
--- configure tailwindcss server
--- lspconfig["tailwindcss"].setup({
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- })
+-- configure clangd server
+local clangd_capabilities = capabilities
+clangd_capabilities.offsetEncoding = "utf-8"
+lspconfig["clangd"].setup({
+	capabilities = clangd_capabilities,
+	on_attach = on_attach,
+})
 
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({

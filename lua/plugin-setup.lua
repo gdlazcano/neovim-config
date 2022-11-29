@@ -112,6 +112,9 @@ return packer.startup(function(use)
 	use({ "akinsho/bufferline.nvim" })
 	use({ "famiu/bufdelete.nvim" })
 
+	-- trouble
+	use({ "folke/trouble.nvim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
