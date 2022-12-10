@@ -24,6 +24,10 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("lunarvim/horizon.nvim") -- preferred colorscheme
+	use({ "heraldofsolace/nisha-vim" })
+	use({ "nocksock/bloop-vim" })
+	use({ "vim-scripts/jellybeans.vim" })
+	use({ "rose-pine/neovim", as = "rose-pine" })
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -114,6 +118,9 @@ return packer.startup(function(use)
 
 	-- trouble
 	use({ "folke/trouble.nvim" })
+
+	-- scrollbar
+	use({ "petertriho/nvim-scrollbar" })
 
 	if packer_bootstrap then
 		require("packer").sync()

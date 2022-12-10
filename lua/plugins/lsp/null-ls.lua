@@ -29,6 +29,11 @@ null_ls.setup({
 		formatting.clang_format.with({
 			filetypes = { "c", "cpp", "objc", "objcpp" },
 		}),
+
+		-- rust
+		formatting.rustfmt.with({
+			filetypes = { "rust", "rs" },
+		}),
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

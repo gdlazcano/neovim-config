@@ -1,7 +1,5 @@
--- disable wrap
-vim.wo.wrap = false
-vim.wo.linebreak = true
-vim.wo.list = true
+-- no wrap
+vim.opt.wrap = false
 
 -- line numbers
 vim.opt.number = true
@@ -25,6 +23,9 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
 
+-- disable swap files
+vim.opt.swapfile = false
+
 -- backspace
 vim.opt.backspace = "indent,eol,start"
 
@@ -33,6 +34,7 @@ vim.opt.clipboard = "unnamed"
 
 vim.g.copilot_filetypes = {
 	["markdown"] = true,
+	["yaml"] = true,
 }
 
 -- make transparent background
