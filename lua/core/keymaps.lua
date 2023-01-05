@@ -8,6 +8,14 @@ vim.keymap.set("n", "<leader>e", ":NeoTreeFocusToggle<CR>")
 vim.keymap.set("n", "<leader>h", ":nohl<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
+-- gitsigns
+vim.keymap.set("n", "<leader>hd", ":Gitsigns diffthis<CR>")
+vim.keymap.set("n", "<leader>hc", ":Gitsigns setqflist<CR>")
+vim.keymap.set("n", "<leader>hl", ":Gitsigns blame_line<CR>")
+vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>")
+vim.keymap.set("n", "<leader>hs", ":Gitsigns stage_hunk<CR>")
+vim.keymap.set("n", "<leader>hh", ":Gitsigns toggle_deleted<CR>")
+
 -- telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>fs", ":Telescope live_grep<CR>")
